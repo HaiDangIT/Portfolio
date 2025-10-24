@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="skillBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0061ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60efff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#skillBg)"/>
+  
+  <!-- Laptop screen -->
+  <rect x="80" y="60" width="240" height="140" rx="8" fill="#fff"/>
+  <rect x="90" y="70" width="220" height="120" fill="#1a1a2e"/>
+  
+  <!-- Code lines -->
+  <rect x="100" y="80" width="80" height="4" rx="2" fill="#0061ff"/>
+  <rect x="100" y="90" width="120" height="4" rx="2" fill="#60efff"/>
+  <rect x="100" y="100" width="60" height="4" rx="2" fill="#0061ff"/>
+  <rect x="100" y="110" width="140" height="4" rx="2" fill="#60efff"/>
+  <rect x="100" y="130" width="100" height="4" rx="2" fill="#0061ff"/>
+  <rect x="100" y="140" width="80" height="4" rx="2" fill="#60efff"/>
+  <rect x="100" y="160" width="120" height="4" rx="2" fill="#0061ff"/>
+  <rect x="100" y="170" width="90" height="4" rx="2" fill="#60efff"/>
+  
+  <!-- Laptop base -->
+  <path d="M 60 200 L 340 200 L 350 220 L 50 220 Z" fill="#e8e8e8"/>
+  
+  <!-- Play button -->
+  <circle cx="320" cy="100" r="20" fill="#0061ff" opacity="0.9"/>
+  <polygon points="315,90 330,100 315,110" fill="#fff"/>
+  
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">SkillCoder Platform</text>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" opacity="0.9">Online Learning • Video Courses</text>
+</svg>

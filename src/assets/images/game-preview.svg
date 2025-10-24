@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="gameBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fc5c7d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6a82fb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#gameBg)"/>
+  
+  <!-- Game controller icon -->
+  <path d="M 150 120 Q 150 100, 170 100 L 230 100 Q 250 100, 250 120 L 260 160 Q 260 180, 240 180 L 160 180 Q 140 180, 140 160 Z" 
+        fill="#fff" opacity="0.9"/>
+  
+  <!-- D-pad -->
+  <rect x="165" y="125" width="8" height="25" fill="#fc5c7d" rx="2"/>
+  <rect x="157" y="133" width="25" height="8" fill="#fc5c7d" rx="2"/>
+  
+  <!-- Buttons -->
+  <circle cx="225" cy="135" r="6" fill="#6a82fb"/>
+  <circle cx="240" cy="135" r="6" fill="#6a82fb"/>
+  <circle cx="225" cy="150" r="6" fill="#6a82fb"/>
+  <circle cx="240" cy="150" r="6" fill="#6a82fb"/>
+  
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">C# Game</text>
+  <text x="200" y="245" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle" opacity="0.9">Roguelike Dungeon</text>
+  
+  <!-- Decorative stars -->
+  <polygon points="80,60 82,66 88,66 83,70 85,76 80,72 75,76 77,70 72,66 78,66" fill="#fff" opacity="0.7"/>
+  <polygon points="320,80 322,86 328,86 323,90 325,96 320,92 315,96 317,90 312,86 318,86" fill="#fff" opacity="0.6"/>
+  <polygon points="100,240 102,246 108,246 103,250 105,256 100,252 95,256 97,250 92,246 98,246" fill="#fff" opacity="0.5"/>
+</svg>

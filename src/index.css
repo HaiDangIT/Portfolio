@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+
+/* CUSTOM THEME */
+@theme {
+  --font-worksans: "Work Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-dosis: "Dosis", sans-serif;
+
+  --color-gray-200: #d5dae1;
+  --color-black: #000;
+  --color-black-500: #1d2235;
+  --color-blue-500: #2b77e7;
+
+  --shadow-card: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* GLOBAL CSS */
+:root {
+  --blue-rgb: 237 245 255;
+  --green-rgb: 125 161 35;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+}
+
+body:has(.card[data-color="blue"]:hover) {
+  background-color: rgb(var(--blue-rgb) / 25%);
+}
+
+body:has(.card[data-color="green"]:hover) {
+  background-color: rgb(var(--green-rgb) / 25%);
+}
+
+/* CUSTOM UTILITY */
+.max-container {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 80px);
+  padding-top: 126px;
+}
+
+.head-text {
+  font-size: clamp(1.875rem, 5vw, 3rem);
+  font-weight: 700;
+  font-family: "Dosis", sans-serif;
+}
+
+.subhead-text {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 600;
+  font-family: "Dosis", sans-serif;
+}
+
+.blue-gradient_text {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: var(--shadow-card);
+}
+
+.btn {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.footer {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+/* Card Info */
+.info-box {
+  color: white;
+  padding: 1rem 2rem;
+  max-width: 32rem;
+  border-radius: 10px;
+}
+
+.neo-brutalism-blue {
+  background: #2b77e7;
+  box-shadow: 6px 6px #336cc1, 10px 10px #0092db;
+}
+
+/* Glass effect */
+.glassmorphism {
+  background: rgba(8, 116, 239, 0.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button 3D blocks */
+.block-container {
+  position: relative;
+  transition: 0.25s;
+  perspective: 500px;
+}
+.block-container .btn-back {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: rotateZ(15deg);
+}
+
+/* COLORS SAME LIKE YOUR FILE */
+.btn-back-blue {
+  background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
+}
+.btn-back-green {
+  background: linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%);
+}
+.btn-back-yellow {
+  background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
+}
+.btn-back-orange {
+  background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
+}
+.btn-back-black {
+  background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
+}
+
+/* CTA Section */
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 198, 255, 0.1),
+    rgba(0, 114, 255, 0.1)
+  );
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.cta-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-black-500);
+}
+
+/* Skill & Experience Cards */
+.btn-front {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.block-container:hover .btn-front {
+  transform: translateY(-5px);
+}
+
+.block-container .btn-back {
+  transition: transform 0.3s ease;
+}
+
+.block-container:hover .btn-back {
+  transform: rotateZ(20deg);
+}
+
+/* Navbar gradient animation */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}

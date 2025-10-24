@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="rentalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#adfda2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#11d3f3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#rentalBg)"/>
+  
+  <!-- Buildings -->
+  <rect x="60" y="120" width="80" height="100" fill="#fff" opacity="0.9"/>
+  <rect x="70" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="90" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="110" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="70" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="90" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="110" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="70" y="170" width="15" height="15" fill="#11d3f3"/>
+  <rect x="90" y="170" width="15" height="15" fill="#11d3f3"/>
+  <rect x="110" y="170" width="15" height="15" fill="#11d3f3"/>
+  
+  <rect x="160" y="100" width="80" height="120" fill="#fff" opacity="0.9"/>
+  <rect x="170" y="110" width="15" height="15" fill="#11d3f3"/>
+  <rect x="190" y="110" width="15" height="15" fill="#11d3f3"/>
+  <rect x="210" y="110" width="15" height="15" fill="#11d3f3"/>
+  <rect x="170" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="190" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="210" y="130" width="15" height="15" fill="#11d3f3"/>
+  <rect x="170" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="190" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="210" y="150" width="15" height="15" fill="#11d3f3"/>
+  <rect x="170" y="170" width="15" height="15" fill="#11d3f3"/>
+  <rect x="190" y="170" width="15" height="15" fill="#11d3f3"/>
+  <rect x="210" y="170" width="15" height="15" fill="#11d3f3"/>
+  
+  <rect x="260" y="130" width="80" height="90" fill="#fff" opacity="0.9"/>
+  <rect x="270" y="140" width="15" height="15" fill="#11d3f3"/>
+  <rect x="290" y="140" width="15" height="15" fill="#11d3f3"/>
+  <rect x="310" y="140" width="15" height="15" fill="#11d3f3"/>
+  <rect x="270" y="160" width="15" height="15" fill="#11d3f3"/>
+  <rect x="290" y="160" width="15" height="15" fill="#11d3f3"/>
+  <rect x="310" y="160" width="15" height="15" fill="#11d3f3"/>
+  <rect x="270" y="180" width="15" height="15" fill="#11d3f3"/>
+  <rect x="290" y="180" width="15" height="15" fill="#11d3f3"/>
+  <rect x="310" y="180" width="15" height="15" fill="#11d3f3"/>
+  
+  <!-- Search icon -->
+  <circle cx="100" cy="60" r="25" fill="#fff" opacity="0.9"/>
+  <circle cx="100" cy="60" r="15" fill="none" stroke="#11d3f3" stroke-width="3"/>
+  <line x1="110" y1="70" x2="120" y2="80" stroke="#11d3f3" stroke-width="3" stroke-linecap="round"/>
+  
+  <text x="200" y="260" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">Rental Room Finder</text>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" opacity="0.9">Find Your Perfect Room</text>
+</svg>
