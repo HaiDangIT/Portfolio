@@ -13,13 +13,13 @@ import CTA from "../components/CTA";
 const About = () => {
   return (
     <section className="max-container">
-      <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+      <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
           <img
             src={avatar}
             alt="Lê Hải Đăng"
-            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300"
+            className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="flex-1 text-center md:text-left">
@@ -29,44 +29,46 @@ const About = () => {
               Lê Hải Đăng
             </span>
           </h1>
-          <div className="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl shadow-xl border-l-4 border-blue-500">
-            <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4 italic">
-              "Hãy theo đuổi sự ưu tú, thành công sẽ theo đuổi bạn"
+          <div className="mt-4 sm:mt-6 bg-gradient-to-r from-blue-50 to-purple-50 p-4 sm:p-6 rounded-2xl shadow-xl border-l-4 border-blue-500">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-3 sm:mb-4 italic">
+              " Hãy theo đuổi sự ưu tú, thành công sẽ theo đuổi bạn "
             </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
               Tôi tin rằng học tập là hành trình không ngừng nghỉ. Mỗi dòng
               code, mỗi dự án, mỗi thử thách đều là cơ hội để chúng ta trở nên
-              tốt hơn. Đừng sợ thất bại, hãy sợ việc không dám thử! 💪
+              tốt hơn. Đừng sợ thất bại, hãy sợ việc không dám thử!
             </p>
-            <p className="text-gray-700 leading-relaxed text-lg mt-3">
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg mt-3">
               Với tôi, lập trình không chỉ là công việc mà là đam mê. Tôi muốn
               truyền cảm hứng để mọi người cùng theo đuổi ước mơ công nghệ,
-              không ngừng học hỏi và phát triển bản thân mỗi ngày! 🚀
+              không ngừng học hỏi và phát triển bản thân mỗi ngày!
             </p>
           </div>
         </div>
       </div>
 
-      <div className="py-10 flex flex-col">
-        <h3 className="subhead-text flex items-center gap-3">
-          <span className="text-4xl">⚡</span>
+      <div className="py-6 sm:py-10 flex flex-col">
+        <h3 className="subhead-text flex items-center gap-2 sm:gap-3">
+          <span className="text-3xl sm:text-4xl">⚡</span>
           Kỹ Năng
-          <span className="text-4xl">🚀</span>
         </h3>
 
-        <div className="mt-16 flex flex-wrap justify-center gap-8">
+        <div className="mt-8 sm:mt-16 flex flex-wrap justify-center gap-6 sm:gap-8">
           {skills.map((skill) => (
-            <div className="group relative w-28 h-28" key={skill.name}>
+            <div
+              className="group relative w-20 h-20 sm:w-28 sm:h-28"
+              key={skill.name}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
-              <div className="relative w-full h-full bg-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex justify-center items-center border-4 border-blue-100 hover:border-blue-400 group-hover:scale-110">
+              <div className="relative w-full h-full bg-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex justify-center items-center border-2 sm:border-4 border-blue-100 hover:border-blue-400 group-hover:scale-110">
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
-                  className="w-16 h-16 object-contain group-hover:scale-125 transition-transform duration-300"
+                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:scale-125 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap shadow-lg">
+              <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-blue-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap shadow-lg">
                   {skill.name}
                 </span>
               </div>
@@ -75,11 +77,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-16">
+      <div className="py-8 sm:py-16">
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎓</span>
           Học Vấn
-          <span className="text-4xl">📚</span>
         </h3>
         <div className="mt-8 bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border-l-4 border-blue-500 hover:shadow-2xl transition-all duration-300">
           <div className="flex items-start gap-6">
@@ -109,7 +110,6 @@ const About = () => {
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🏆</span>
           Chứng Chỉ
-          <span className="text-4xl">📜</span>
         </h3>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((cert) => (
@@ -155,11 +155,10 @@ const About = () => {
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🚀</span>
           Hành Trình Học Tập
-          <span className="text-4xl">📈</span>
         </h3>
         <p className="mt-4 text-slate-500 text-lg">
           Từ những dòng code đầu tiên năm 2022 đến hiện tại, đây là hành trình
-          phát triển kỹ năng của tôi 💪
+          phát triển kỹ năng của tôi
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {journey.map((item, index) => (
@@ -195,7 +194,6 @@ const About = () => {
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎮</span>
           Sở Thích & Đam Mê
-          <span className="text-4xl">💖</span>
         </h3>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {hobbies.map((hobby, index) => (
@@ -236,7 +234,6 @@ const About = () => {
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎯</span>
           Mục Tiêu & Định Hướng
-          <span className="text-4xl">🌟</span>
         </h3>
         <p className="mt-4 text-slate-500 text-lg">
           Kế hoạch phát triển bản thân và sự nghiệp trong lĩnh vực công nghệ 🚀
@@ -272,6 +269,24 @@ const About = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Download CV Section */}
+      <div className="py-10 flex justify-center">
+        <a
+          href={`${import.meta.env.BASE_URL}cv/LeHaiDang_CV.pdf`}
+          download="LeHaiDang_CV.pdf"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 group"
+        >
+          <svg
+            className="w-6 h-6 group-hover:animate-bounce"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+          </svg>
+          <span>📄 Tải CV của tôi (PDF)</span>
+        </a>
       </div>
     </section>
   );

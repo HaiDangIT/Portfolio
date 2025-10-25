@@ -42,28 +42,28 @@ const Projects = () => {
             💼
           </span>
         </h1>
-        <div className="absolute -top-10 right-0 text-8xl opacity-5 pointer-events-none">
+        <div className="absolute -top-6 sm:-top-10 right-0 text-5xl sm:text-8xl opacity-5 pointer-events-none">
           🚀
         </div>
       </div>
 
-      <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p className="text-lg">
+      <div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3 text-slate-500">
+        <p className="text-sm sm:text-base md:text-lg">
           Đây là tổng hợp các dự án mà tôi đã thực hiện, từ các ứng dụng
           full-stack đến các website frontend hiện đại. Mỗi dự án đều được xây
-          dựng với sự tận tâm và áp dụng các công nghệ mới nhất. 🔥
+          dựng với sự tận tâm và áp dụng các công nghệ mới nhất.
         </p>
       </div>
 
       {/* Category Filter with Icons */}
-      <div className="mt-12 flex flex-wrap gap-4 justify-center">
+      <div className="mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-4 justify-center">
         {categories.map((category) => (
           <button
             key={category.name}
             onClick={() => setSelectedCategory(category.name)}
-            className={`group relative px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform ${
+            className={`group relative px-3 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold transition-all duration-300 transform ${
               selectedCategory === category.name
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl scale-110"
+                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl scale-105 sm:scale-110"
                 : "bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg hover:scale-105"
             } border-2 ${
               selectedCategory === category.name
@@ -71,11 +71,11 @@ const Projects = () => {
                 : "border-gray-200 hover:border-blue-300"
             }`}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-xl">{category.icon}</span>
-              <span>{category.name}</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <span className="text-base sm:text-xl">{category.icon}</span>
+              <span className="whitespace-nowrap">{category.name}</span>
               <span
-                className={`ml-1 px-2 py-0.5 rounded-full text-xs font-bold ${
+                className={`ml-0.5 sm:ml-1 px-1.5 sm:px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold ${
                   selectedCategory === category.name
                     ? "bg-white/20 text-white"
                     : "bg-blue-100 text-blue-600 group-hover:bg-blue-200"
@@ -85,17 +85,17 @@ const Projects = () => {
               </span>
             </div>
             {selectedCategory === category.name && (
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 blur-xl"></div>
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 blur-xl"></div>
             )}
           </button>
         ))}
       </div>
 
       {/* Projects Count Display */}
-      <div className="mt-8 text-center">
-        <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border-2 border-blue-200">
-          <span className="text-2xl">📊</span>
-          <span className="text-gray-700 font-medium">
+      <div className="mt-6 sm:mt-8 text-center">
+        <div className="inline-flex items-center gap-1 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border-2 border-blue-200">
+          <span className="text-lg sm:text-2xl">📊</span>
+          <span className="text-gray-700 font-medium text-xs sm:text-base">
             Hiển thị{" "}
             <span className="text-blue-600 font-bold">
               {filteredProjects.length}
@@ -115,7 +115,7 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {filteredProjects.map((project, index) => (
           <div
             key={`project-${index}`}
@@ -144,12 +144,17 @@ const Projects = () => {
 
               {/* Main Icon */}
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <img
-                    src={project.iconUrl}
-                    alt={project.name}
-                    className="w-10 h-10 object-contain"
-                  />
+                <div className="w-16 h-16 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 p-2">
+                  <div className="w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-lg flex items-center justify-center">
+                    <img
+                      src={project.iconUrl}
+                      alt={project.name}
+                      className="w-8 h-8 object-contain drop-shadow-md"
+                      style={{
+                        filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))",
+                      }}
+                    />
+                  </div>
                 </div>
                 <h3 className="text-white text-xl font-bold drop-shadow-lg group-hover:translate-x-1 transition-transform duration-300">
                   {project.name}
@@ -171,17 +176,17 @@ const Projects = () => {
             </div>
 
             {/* Card Body */}
-            <div className="p-6 space-y-4">
-              <p className="text-gray-700 text-sm leading-relaxed line-clamp-3 group-hover:text-gray-900 transition-colors">
+            <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed line-clamp-3 group-hover:text-gray-900 transition-colors">
                 {project.description}
               </p>
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full border border-blue-200 hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-default"
+                    className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-50 text-blue-700 text-[10px] sm:text-xs font-medium rounded-full border border-blue-200 hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-default"
                   >
                     💻 {tech}
                   </span>
@@ -193,7 +198,7 @@ const Projects = () => {
                 to={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition-all duration-300 group/link mt-4 hover:gap-3"
+                className="flex items-center gap-1 sm:gap-2 text-blue-600 text-sm sm:text-base font-semibold hover:text-blue-800 transition-all duration-300 group/link mt-3 sm:mt-4 hover:gap-3"
               >
                 <span className="relative">
                   Xem dự án
@@ -202,7 +207,7 @@ const Projects = () => {
                 <img
                   src={arrow}
                   alt="arrow"
-                  className="w-4 h-4 object-contain group-hover/link:translate-x-1 transition-transform duration-300"
+                  className="w-3 h-3 sm:w-4 sm:h-4 object-contain group-hover/link:translate-x-1 transition-transform duration-300"
                 />
               </Link>
             </div>
@@ -212,7 +217,7 @@ const Projects = () => {
 
             {/* Corner Badge */}
             <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
+              <div className="bg-yellow-400 text-yellow-900 text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full flex items-center gap-0.5 sm:gap-1">
                 <span>⭐</span>
                 <span>Featured</span>
               </div>
@@ -223,73 +228,73 @@ const Projects = () => {
 
       {/* Empty State */}
       {filteredProjects.length === 0 && (
-        <div className="mt-20 text-center py-20">
-          <div className="text-8xl mb-4">😕</div>
-          <h3 className="text-2xl font-bold text-gray-700 mb-2">
+        <div className="mt-12 sm:mt-20 text-center py-12 sm:py-20">
+          <div className="text-6xl sm:text-8xl mb-3 sm:mb-4">😕</div>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-700 mb-2">
             Không tìm thấy dự án
           </h3>
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-sm sm:text-base">
             Hiện tại chưa có dự án nào trong danh mục này.
           </p>
         </div>
       )}
 
       {/* Stats Section with Icons */}
-      <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div className="relative group bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl text-center border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
-          <div className="absolute -top-8 -right-8 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
+      <div className="mt-12 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="relative group bg-gradient-to-br from-blue-50 to-cyan-50 p-4 sm:p-6 rounded-2xl text-center border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
+          <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-6xl sm:text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
             📁
           </div>
           <div className="relative z-10">
-            <div className="text-5xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               {projects.length}
             </div>
-            <div className="text-sm text-gray-600 font-medium flex items-center justify-center gap-1">
+            <div className="text-[10px] sm:text-sm text-gray-600 font-medium flex items-center justify-center gap-0.5 sm:gap-1">
               <span>📁</span>
               <span>Dự án hoàn thành</span>
             </div>
           </div>
         </div>
 
-        <div className="relative group bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl text-center border-2 border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
-          <div className="absolute -top-8 -right-8 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
+        <div className="relative group bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl text-center border-2 border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
+          <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-6xl sm:text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
             ⚡
           </div>
           <div className="relative z-10">
-            <div className="text-5xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl sm:text-5xl font-bold text-green-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               9
             </div>
-            <div className="text-sm text-gray-600 font-medium flex items-center justify-center gap-1">
+            <div className="text-[10px] sm:text-sm text-gray-600 font-medium flex items-center justify-center gap-0.5 sm:gap-1">
               <span>⚡</span>
               <span>Công nghệ sử dụng</span>
             </div>
           </div>
         </div>
 
-        <div className="relative group bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl text-center border-2 border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
-          <div className="absolute -top-8 -right-8 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
+        <div className="relative group bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 rounded-2xl text-center border-2 border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
+          <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-6xl sm:text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
             🎯
           </div>
           <div className="relative z-10">
-            <div className="text-5xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl sm:text-5xl font-bold text-purple-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               3
             </div>
-            <div className="text-sm text-gray-600 font-medium flex items-center justify-center gap-1">
+            <div className="text-[10px] sm:text-sm text-gray-600 font-medium flex items-center justify-center gap-0.5 sm:gap-1">
               <span>🎯</span>
               <span>Loại dự án</span>
             </div>
           </div>
         </div>
 
-        <div className="relative group bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-2xl text-center border-2 border-orange-100 hover:border-orange-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
-          <div className="absolute -top-8 -right-8 text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
+        <div className="relative group bg-gradient-to-br from-orange-50 to-yellow-50 p-4 sm:p-6 rounded-2xl text-center border-2 border-orange-100 hover:border-orange-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
+          <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-6xl sm:text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
             🔥
           </div>
           <div className="relative z-10">
-            <div className="text-5xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform">
+            <div className="text-3xl sm:text-5xl font-bold text-orange-600 mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               ∞
             </div>
-            <div className="text-sm text-gray-600 font-medium flex items-center justify-center gap-1">
+            <div className="text-[10px] sm:text-sm text-gray-600 font-medium flex items-center justify-center gap-0.5 sm:gap-1">
               <span>🔥</span>
               <span>Đam mê học hỏi</span>
             </div>
@@ -298,19 +303,19 @@ const Projects = () => {
       </div>
 
       {/* Tech Stack Showcase */}
-      <div className="mt-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-blue-200">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-3">
+      <div className="mt-12 sm:mt-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-blue-200">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-2 sm:gap-3">
             <span>🛠️</span>
             <span>Tech Stack</span>
             <span>🚀</span>
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-xs sm:text-base">
             Các công nghệ tôi sử dụng trong các dự án
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           {[
             { name: "React", icon: "⚛️", color: "blue" },
             { name: "Node.js", icon: "💚", color: "green" },
@@ -324,13 +329,13 @@ const Projects = () => {
           ].map((tech, idx) => (
             <div
               key={idx}
-              className={`group px-5 py-3 bg-white rounded-full shadow-md hover:shadow-xl transition-all duration-300 border-2 border-${tech.color}-200 hover:border-${tech.color}-400 hover:scale-110 cursor-pointer`}
+              className={`group px-3 sm:px-5 py-2 sm:py-3 bg-white rounded-full shadow-md hover:shadow-xl transition-all duration-300 border-2 border-${tech.color}-200 hover:border-${tech.color}-400 hover:scale-110 cursor-pointer`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-xl group-hover:scale-125 transition-transform">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <span className="text-base sm:text-xl group-hover:scale-125 transition-transform">
                   {tech.icon}
                 </span>
-                <span className="font-semibold text-gray-700 group-hover:text-gray-900">
+                <span className="font-semibold text-gray-700 group-hover:text-gray-900 text-xs sm:text-base">
                   {tech.name}
                 </span>
               </div>

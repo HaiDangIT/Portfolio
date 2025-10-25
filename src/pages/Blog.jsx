@@ -173,8 +173,7 @@ const Blog = () => {
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p className="text-lg">
           Chia sẻ kiến thức về lập trình, công nghệ và kinh nghiệm học tập. Từ
-          Java ☕, JavaScript ⚡ đến các so sánh chuyên sâu ⚖️ giữa các công
-          nghệ.
+          Java, JavaScript và C# đến các so sánh chuyên sâu giữa các công nghệ.
         </p>
       </div>
 
@@ -242,7 +241,6 @@ const Blog = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
             <span className="text-4xl">⭐</span>
             <span>Bài Viết Nổi Bật</span>
-            <span className="text-4xl">✨</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {featuredPosts.map((post) => (

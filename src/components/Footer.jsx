@@ -97,7 +97,7 @@ const Footer = () => {
             © 2025
           </p>
           <p className="text-gray-500 text-xs text-center md:text-right">
-            Made with ❤️ using React, Tailwind CSS
+            From HaiDang with ❤️
           </p>
         </div>
       </div>

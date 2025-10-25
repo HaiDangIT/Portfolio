@@ -5,5 +5,15 @@ import Footer from "./Footer";
 import HomeInfo from "./HomeInfo";
 import CTA from "./CTA";
 import PageTransition from "./PageTransition";
+import MusicPlayer from "./MusicPlayer";
 
-export { Alert, Navbar, Footer, HomeInfo, Loader, CTA, PageTransition };
+export {
+  Alert,
+  Navbar,
+  Footer,
+  HomeInfo,
+  Loader,
+  CTA,
+  PageTransition,
+  MusicPlayer,
+};

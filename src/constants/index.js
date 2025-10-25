@@ -71,11 +71,6 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: mui,
-    name: "Material-UI",
-    type: "Frontend",
-  },
-  {
     imageUrl: nodejs,
     name: "Node.js",
     type: "Backend",
@@ -83,11 +78,6 @@ export const skills = [
   {
     imageUrl: react,
     name: "React",
-    type: "Frontend",
-  },
-  {
-    imageUrl: sass,
-    name: "Sass",
     type: "Frontend",
   },
   {
@@ -160,7 +150,7 @@ export const experiences = [
 export const education = {
   school: "Đại học Công nghệ TP.HCM",
   degree: "Cử nhân Công nghệ Thông tin",
-  period: "2020 - Hiện tại",
+  period: "2022 - Hiện tại",
   description: "Chuyên ngành: Công nghệ Phần mềm",
 };
 
@@ -226,7 +216,7 @@ export const hobbies = [
   {
     title: "Chơi Game Cốt Truyện",
     description:
-      "Đam mê các game RPG và adventure có câu chuyện sâu sắc như The Witcher 3, Red Dead Redemption 2, God of War. Tôi yêu thích việc khám phá thế giới game, phân tích cốt truyện phức tạp và trải nghiệm những hành trình cảm động của nhân vật.",
+      "Đam mê các game RPG và adventure có câu chuyện sâu sắc như The Witcher 3, Red Dead Redemption 2, God of War. Tôi yêu thích việc khám phá thế giới game, phân tích cốt truyện phức tạp và trải nghiệm những hành trình riêng của mỗi nhân vật.",
     icon: "🎮",
     examples: [
       "The Witcher 3",
@@ -375,23 +365,23 @@ export const blogPosts = [
     content: `
 ## Java - Ngôn ngữ của Enterprise và Android
 
-Java là ngôn ngữ lập trình hướng đối tượng được phát triển bởi Sun Microsystems (nay thuộc Oracle) vào năm 1995 bởi James Gosling. Sau gần 30 năm, Java vẫn là một trong 3 ngôn ngữ phổ biến nhất thế giới với **hơn 9 triệu developers** và **3 tỷ thiết bị** chạy Java.
+Java là ngôn ngữ lập trình hướng đối tượng được phát triển bởi Sun Microsystems (nay thuộc Oracle) vào năm 1995 bởi James Gosling. Sau gần 30 năm, Java vẫn là một trong 3 ngôn ngữ phổ biến nhất thế giới với hơn 9 triệu developers và 3 tỷ thiết bị chạy Java.
 
 ### Tại sao Java vẫn "hot" đến tận bây giờ?
 
-**1. Hệ sinh thái khổng lồ 🌐**
+1. Hệ sinh thái khổng lồ 🌐
 - Hàng triệu thư viện mã nguồn mở trên Maven Central
 - Framework enterprise mạnh mẽ: Spring Boot, Hibernate, Jakarta EE
 - Cộng đồng support khổng lồ trên Stack Overflow, GitHub
 - Được sử dụng bởi 90% công ty Fortune 500
 
-**2. Performance xuất sắc ⚡**
+2. Performance xuất sắc ⚡
 - JVM được tối ưu hóa liên tục qua 25+ năm
 - Just-In-Time (JIT) compilation tăng tốc runtime
 - Modern GC (G1GC, ZGC, Shenandoah) với latency cực thấp
 - Nhanh hơn Python/JavaScript 10-100 lần trong nhiều trường hợp
 
-**3. Write Once, Run Anywhere 🚀**
+3. Write Once, Run Anywhere 🚀
 - Java bytecode chạy trên mọi platform có JVM
 - Windows, Linux, macOS - không cần compile lại
 - Docker containers, Cloud native
@@ -399,7 +389,7 @@ Java là ngôn ngữ lập trình hướng đối tượng được phát triể
 
 ### Đặc điểm nổi bật
 
-**1. Strongly Typed & Type Safety**
+1. Strongly Typed & Type Safety
 
 \`\`\`java
 // Java kiểm tra type nghiêm ngặt lúc compile
@@ -414,7 +404,7 @@ names.add("Hải Đăng");
 String name = names.get(0);  // Không cần cast
 \`\`\`
 
-**2. Object-Oriented Programming (OOP)**
+2. Object-Oriented Programming (OOP)
 
 Java là ngôn ngữ OOP thuần túy với 4 tính chất:
 
@@ -474,7 +464,7 @@ public abstract class Vehicle {
 }
 \`\`\`
 
-**3. Automatic Memory Management**
+3. Automatic Memory Management
 
 \`\`\`java
 public void processData() {
@@ -498,7 +488,7 @@ public void processData() {
 // - Shenandoah: Concurrent GC, pause time đồng đều
 \`\`\`
 
-**4. Multithreading Built-in**
+4. Multithreading Built-in
 
 \`\`\`java
 // Thread cơ bản
@@ -536,7 +526,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ### Ứng dụng thực tế của Java
 
-**1. Enterprise Applications 🏢**
+1. Enterprise Applications 🏢
 - Ngân hàng: VietcomBank, Techcombank, BIDV
 - E-commerce: Shopee, Tiki (backend services)
 - ERP/CRM: SAP, Oracle Applications
@@ -571,32 +561,32 @@ public class ProductController {
 }
 \`\`\`
 
-**2. Android Development 📱**
+2. Android Development 📱
 - 85% market share smartphone toàn cầu
 - 2.5 tỷ thiết bị Android active
 - Kotlin (chạy trên JVM) là ngôn ngữ chính thức
 - Google Play Services viết bằng Java
 
-**3. Big Data & Analytics 📊**
+3. Big Data & Analytics 📊
 - Apache Hadoop: Xử lý petabytes data
 - Apache Spark: Real-time processing
 - Apache Kafka: Event streaming platform
 - Elasticsearch: Search & analytics engine
 
-**4. Cloud & Microservices ☁️**
+4. Cloud & Microservices ☁️
 - Spring Cloud: Netflix OSS, service discovery
 - Quarkus: Siêu nhanh, cloud-native
 - Micronaut: GraalVM native image
 - Jakarta EE: Enterprise services
 
-**5. Game Development 🎮**
+5. Game Development 🎮
 - Minecraft - bestselling game mọi thời đại
 - LibGDX framework - cross-platform
 - jMonkeyEngine - 3D game engine
 
 ### Modern Java Features
 
-**Records (Java 14+) - Data Class**
+Records (Java 14+) - Data Class
 \`\`\`java
 // Trước Java 14 - phải viết nhiều code
 public class User {
@@ -629,7 +619,7 @@ System.out.println(user.name());  // Getter
 System.out.println(user);  // User[name=Hải Đăng, age=25]
 \`\`\`
 
-**Pattern Matching (Java 16+)**
+Pattern Matching (Java 16+)
 \`\`\`java
 // Trước Java 16
 if (obj instanceof String) {
@@ -651,7 +641,7 @@ String result = switch (obj) {
 };
 \`\`\`
 
-**Text Blocks (Java 15+)**
+Text Blocks (Java 15+)
 \`\`\`java
 // Trước Java 15 - khó đọc
 String json = "{\n" +
@@ -669,7 +659,7 @@ String json = """
     """;
 \`\`\`
 
-**Sealed Classes (Java 17+)**
+Sealed Classes (Java 17+)
 \`\`\`java
 // Kiểm soát inheritance
 public sealed interface Payment permits CreditCard, DebitCard, MoMo {
@@ -693,21 +683,21 @@ public final class MoMo implements Payment {
 
 ### Learning Path - Lộ trình học Java
 
-**Level 1: Core Java (2-3 tháng)**
+Level 1: Core Java (2-3 tháng)
 ✅ Syntax, Variables, Data Types
 ✅ Control Flow: if/else, loops
 ✅ OOP: Class, Object, Inheritance
 ✅ Collections: List, Set, Map
 ✅ Exception Handling
 
-**Level 2: Advanced Java (3-4 tháng)**
+Level 2: Advanced Java (3-4 tháng)
 ✅ Generics & Lambda Expressions
 ✅ Stream API & Functional Programming
 ✅ Multithreading & Concurrency
 ✅ File I/O & Networking
 ✅ JDBC & Database
 
-**Level 3: Enterprise (4-6 tháng)**
+Level 3: Enterprise (4-6 tháng)
 ✅ Spring Framework & Spring Boot
 ✅ RESTful API Development
 ✅ Spring Data JPA / Hibernate
@@ -717,16 +707,16 @@ public final class MoMo implements Payment {
 
 ### Java Ecosystem - Công cụ cần biết
 
-**Build Tools:**
+Build Tools:
 - Maven: Dependency management, chuẩn enterprise
 - Gradle: Modern, nhanh hơn Maven
 
-**Testing:**
+Testing:
 - JUnit 5: Unit testing
 - Mockito: Mocking framework
 - TestContainers: Integration test với Docker
 
-**Frameworks:**
+Frameworks:
 - Spring Boot: #1 framework Java
 - Hibernate: ORM phổ biến nhất
 - Quarkus: Cloud-native, siêu nhanh
@@ -734,23 +724,23 @@ public final class MoMo implements Payment {
 
 ### Mức lương Java Developer (2025)
 
-**Fresher (0-1 năm):** 8-15 triệu VNĐ/tháng
-**Junior (1-2 năm):** 15-25 triệu VNĐ/tháng
-**Middle (2-4 năm):** 25-40 triệu VNĐ/tháng
-**Senior (4+ năm):** 40-80 triệu VNĐ/tháng
-**Tech Lead/Architect:** 80-150 triệu VNĐ/tháng
+Fresher (0-1 năm): 8-15 triệu VNĐ/tháng
+Junior (1-2 năm): 15-25 triệu VNĐ/tháng
+Middle (2-4 năm): 25-40 triệu VNĐ/tháng
+Senior (4+ năm): 40-80 triệu VNĐ/tháng
+Tech Lead/Architect: 80-150 triệu VNĐ/tháng
 
 ### Kết luận
 
 Java không chỉ là ngôn ngữ lập trình, mà là cả một hệ sinh thái hoàn chỉnh:
 
-✅ **Ổn định**: 30 năm proven track record
-✅ **Performance**: Ngang C++, vượt xa Python/JS
-✅ **Cộng đồng**: 9M developers worldwide
-✅ **Jobs**: Nhiều công việc, lương cao
-✅ **Tương lai**: Java 21+ với features hiện đại
+✅ Ổn định: 30 năm proven track record
+✅ Performance: Ngang C++, vượt xa Python/JS
+✅ Cộng đồng: 9M developers worldwide
+✅ Jobs: Nhiều công việc, lương cao
+✅ Tương lai: Java 21+ với features hiện đại
 
-Đầu tư học Java = Đầu tư cho sự nghiệp! 🚀
+Đầu tư học Java = Đầu tư cho sự nghiệp!
     `,
     category: "Java",
     date: "2025-10-20",
@@ -768,29 +758,29 @@ Java không chỉ là ngôn ngữ lập trình, mà là cả một hệ sinh th�
 
 Spring Boot đã cách mạng hóa cách chúng ta xây dựng ứng dụng Java. Từ việc phải config hàng trăm dòng XML, giờ chỉ cần một vài annotations là có ngay một ứng dụng production-ready!
 
-**Fun fact:** Spring Boot được hơn **60% Java developers** sử dụng, với hơn **50 triệu downloads/tháng** trên Maven Central.
+Fun fact: Spring Boot được hơn 60% Java developers sử dụng, với hơn 50 triệu downloads/tháng trên Maven Central.
 
 ### Tại sao Spring Boot lại "hot" đến vậy?
 
-**1. Convention over Configuration**
+1. Convention over Configuration
 - Không cần config XML dài dòng
 - Auto-configuration thông minh
 - Opinionated defaults giúp bắt đầu nhanh
 - Override dễ dàng khi cần customize
 
-**2. Production-Ready Features**
+2. Production-Ready Features
 - Embedded servers (Tomcat, Jetty, Undertow)
 - Health checks & metrics out-of-the-box
 - Application monitoring sẵn có
 - Security được tích hợp sẵn
 
-**3. Microservices-Friendly**
+3. Microservices-Friendly
 - Spring Cloud ecosystem
 - Service discovery & load balancing
 - Distributed configuration
 - Circuit breakers & resilience
 
-**4. Developer Experience**
+4. Developer Experience
 - Spring Initializr: Tạo project trong 30s
 - Spring Boot DevTools: Hot reload
 - Excellent documentation
@@ -815,7 +805,7 @@ public class HelloWorldApp {
 }
 \`\`\`
 
-**Chạy:**
+Chạy:
 \`\`\`bash
 ./mvnw spring-boot:run
 # hoặc
@@ -825,7 +815,7 @@ java -jar app.jar
 # Truy cập "/" → "Hello, Spring Boot!"
 \`\`\`
 
-**So với Java thuần:**
+So với Java thuần:
 - Không cần setup Tomcat server
 - Không cần web.xml, servlet config
 - Không cần XML configuration
@@ -833,7 +823,7 @@ java -jar app.jar
 
 ### Dependency Injection - Trái tim của Spring
 
-**1. @Autowired - Inject dependencies tự động**
+1. @Autowired - Inject dependencies tự động
 
 \`\`\`java
 // Service Layer
@@ -876,7 +866,7 @@ public class UserController {
 }
 \`\`\`
 
-**2. Constructor Injection - Recommended way**
+2. Constructor Injection - Recommended way
 
 \`\`\`java
 @RestController
@@ -1007,7 +997,7 @@ public class ProductController {
 }
 \`\`\`
 
-**application.yml - Configuration**
+application.yml - Configuration
 \`\`\`yaml
 spring:
   datasource:
@@ -1024,7 +1014,7 @@ server:
   port: 8080
 \`\`\`
 
-**Chạy app → API sẵn sàng:**
+Chạy app → API sẵn sàng:
 - GET http://localhost:8080/api/products
 - POST http://localhost:8080/api/products
 - PUT http://localhost:8080/api/products/1
@@ -1142,8 +1132,8 @@ public class SecurityConfig {
         http
             .csrf().disable()
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/public/**").permitAll()
-                .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/public/").permitAll()
+                .requestMatchers("/api/admin/").hasRole("ADMIN")
                 .anyRequest().authenticated()
             )
             .httpBasic();
@@ -1201,7 +1191,7 @@ management:
       show-details: always
 \`\`\`
 
-**Endpoints tự động:**
+Endpoints tự động:
 - /actuator/health → Health status
 - /actuator/info → App info
 - /actuator/metrics → Metrics
@@ -1209,15 +1199,15 @@ management:
 
 ### Kết luận
 
-Spring Boot = **Best choice** cho Java backend:
+Spring Boot = Best choice cho Java backend:
 
-✅ **Fast Development**: Convention over configuration
-✅ **Production-Ready**: Embedded server, monitoring
-✅ **Rich Ecosystem**: Spring Data, Security, Cloud
-✅ **Industry Standard**: 60%+ Java projects
-✅ **High Demand**: Lương cao, job nhiều
+✅ Fast Development: Convention over configuration
+✅ Production-Ready: Embedded server, monitoring
+✅ Rich Ecosystem: Spring Data, Security, Cloud
+✅ Industry Standard: 60%+ Java projects
+✅ High Demand: Lương cao, job nhiều
 
-**Learning Path:**
+Learning Path:
 1. Core Java (OOP, Collections)
 2. Spring Core (DI, IoC)
 3. Spring Boot Basics
@@ -1243,11 +1233,11 @@ Happy Spring Boot coding! 🚀
 
 Đây là câu hỏi phỏng vấn Java kinh điển: "Khi nào dùng ArrayList, khi nào dùng LinkedList?" Nhiều người chỉ biết lý thuyết nhưng không hiểu sâu về performance implications.
 
-Hôm nay mình sẽ phân tích chi tiết để các bạn **không bao giờ chọn sai** nữa!
+Hôm nay mình sẽ phân tích chi tiết để các bạn không bao giờ chọn sai nữa!
 
 ### Internal Structure - Cấu trúc bên trong
 
-**ArrayList - Dynamic Array**
+ArrayList - Dynamic Array
 
 \`\`\`java
 // ArrayList lưu trữ elements trong array
@@ -1276,7 +1266,7 @@ public class ArrayList<E> {
 }
 \`\`\`
 
-**LinkedList - Doubly Linked List**
+LinkedList - Doubly Linked List
 
 \`\`\`java
 // LinkedList lưu trữ elements trong nodes
@@ -1324,12 +1314,12 @@ public class LinkedList<E> {
 
 | Operation | ArrayList | LinkedList |
 |-----------|-----------|------------|
-| **get(index)** | **O(1)** ⚡ | O(n) 🐢 |
-| **add(element)** | O(1)* | **O(1)** ⚡ |
-| **add(index, element)** | O(n) | O(n) |
-| **remove(index)** | O(n) | O(n) |
-| **contains(element)** | O(n) | O(n) |
-| **iterator.remove()** | O(n) | **O(1)** ⚡ |
+| get(index) | O(1) ⚡ | O(n) 🐢 |
+| add(element) | O(1)* | O(1) ⚡ |
+| add(index, element) | O(n) | O(n) |
+| remove(index) | O(n) | O(n) |
+| contains(element) | O(n) | O(n) |
+| iterator.remove() | O(n) | O(1) ⚡ |
 
 *ArrayList add() có thể O(n) khi resize array
 
@@ -1371,7 +1361,7 @@ public class BenchmarkTest {
 }
 \`\`\`
 
-**Kết quả (100,000 elements):**
+Kết quả (100,000 elements):
 \`\`\`
 ArrayList random access: 2ms ⚡
 LinkedList random access: 4,850ms 🐢
@@ -1385,7 +1375,7 @@ LinkedList add at beginning: 5ms ⚡
 
 ### Memory Usage - Sử dụng bộ nhớ
 
-**ArrayList:**
+ArrayList:
 \`\`\`java
 // ArrayList memory = array + metadata
 Memory = 24 bytes (object header)
@@ -1397,7 +1387,7 @@ Memory = 24 bytes (object header)
 = 24 + 4 + 4 + (16 * 4) = 96 bytes
 \`\`\`
 
-**LinkedList:**
+LinkedList:
 \`\`\`java
 // LinkedList memory = nodes + metadata
 Memory = 24 bytes (object header)
@@ -1417,13 +1407,13 @@ Memory = 24 bytes (object header)
 = 24 + 8 + 8 + 4 + (10 * 28) = 324 bytes
 \`\`\`
 
-**Kết luận:** ArrayList tiết kiệm bộ nhớ hơn **3-4 lần**!
+Kết luận: ArrayList tiết kiệm bộ nhớ hơn 3-4 lần!
 
 ### Use Cases - Khi nào dùng gì?
 
-**Dùng ArrayList khi:**
+Dùng ArrayList khi:
 
-✅ **Random access nhiều**
+✅ Random access nhiều
 \`\`\`java
 // Accessing by index frequently
 List<Product> products = new ArrayList<>();
@@ -1433,29 +1423,29 @@ for (int i = 0; i < products.size(); i++) {
 }
 \`\`\`
 
-✅ **Read nhiều hơn write**
+✅ Read nhiều hơn write
 \`\`\`java
 // Config data - rarely changes
 List<Config> configs = loadConfigs();  // ArrayList
 Config dbConfig = configs.get(0);  // Fast access
 \`\`\`
 
-✅ **Thêm elements ở cuối**
+✅ Thêm elements ở cuối
 \`\`\`java
 List<LogEntry> logs = new ArrayList<>();
 logs.add(new LogEntry("Error occurred"));  // O(1)
 \`\`\`
 
-✅ **Iterate thông thường**
+✅ Iterate thông thường
 \`\`\`java
 for (User user : users) {  // ArrayList faster
     sendEmail(user);
 }
 \`\`\`
 
-**Dùng LinkedList khi:**
+Dùng LinkedList khi:
 
-✅ **Insert/Delete ở đầu hoặc giữa**
+✅ Insert/Delete ở đầu hoặc giữa
 \`\`\`java
 LinkedList<Task> queue = new LinkedList<>();
 queue.addFirst(urgentTask);  // O(1)
@@ -1463,7 +1453,7 @@ queue.addLast(normalTask);   // O(1)
 Task next = queue.removeFirst();  // O(1)
 \`\`\`
 
-✅ **Implement Queue/Deque**
+✅ Implement Queue/Deque
 \`\`\`java
 Deque<Integer> deque = new LinkedList<>();
 deque.offerFirst(1);   // Add to front
@@ -1472,7 +1462,7 @@ deque.pollFirst();     // Remove from front
 deque.pollLast();      // Remove from end
 \`\`\`
 
-✅ **Iterator.remove() nhiều**
+✅ Iterator.remove() nhiều
 \`\`\`java
 Iterator<String> iter = list.iterator();
 while (iter.hasNext()) {
@@ -1485,7 +1475,7 @@ while (iter.hasNext()) {
 
 ### Real-world Examples
 
-**Example 1: Shopping Cart (Dùng ArrayList)**
+Example 1: Shopping Cart (Dùng ArrayList)
 \`\`\`java
 public class ShoppingCart {
     private List<CartItem> items = new ArrayList<>();
@@ -1512,7 +1502,7 @@ public class ShoppingCart {
 }
 \`\`\`
 
-**Example 2: Task Queue (Dùng LinkedList)**
+Example 2: Task Queue (Dùng LinkedList)
 \`\`\`java
 public class TaskQueue {
     private LinkedList<Task> queue = new LinkedList<>();
@@ -1535,7 +1525,7 @@ public class TaskQueue {
 }
 \`\`\`
 
-**Example 3: Browser History (Dùng LinkedList)**
+Example 3: Browser History (Dùng LinkedList)
 \`\`\`java
 public class BrowserHistory {
     private LinkedList<String> history = new LinkedList<>();
@@ -1570,7 +1560,7 @@ public class BrowserHistory {
 
 ### Common Mistakes - Sai lầm thường gặp
 
-❌ **Mistake 1: Dùng LinkedList vì "insert nhanh"**
+❌ Mistake 1: Dùng LinkedList vì "insert nhanh"
 \`\`\`java
 // ❌ WRONG - LinkedList không nhanh hơn!
 List<String> names = new LinkedList<>();
@@ -1585,7 +1575,7 @@ for (int i = 0; i < 1000; i++) {
 }
 \`\`\`
 
-❌ **Mistake 2: Random access trong LinkedList**
+❌ Mistake 2: Random access trong LinkedList
 \`\`\`java
 // ❌ WRONG - Cực kỳ chậm!
 LinkedList<Integer> list = new LinkedList<>();
@@ -1600,7 +1590,7 @@ for (Integer value : list) {  // O(n)
 }
 \`\`\`
 
-❌ **Mistake 3: Không set initial capacity**
+❌ Mistake 3: Không set initial capacity
 \`\`\`java
 // ❌ WRONG - Resize nhiều lần
 List<String> list = new ArrayList<>();  // capacity = 10
@@ -1626,23 +1616,23 @@ Hỏi: Cần access by index?
         └─ Không → ArrayList ✅ (default choice)
 \`\`\`
 
-**Rule of thumb:** 
-- **90% trường hợp:** Dùng **ArrayList**
-- **10% trường hợp:** Dùng **LinkedList** (Queue/Deque)
+Rule of thumb: 
+- 90% trường hợp: Dùng ArrayList
+- 10% trường hợp: Dùng LinkedList (Queue/Deque)
 
 ### Kết luận
 
 | Metric | ArrayList | LinkedList |
 |--------|-----------|------------|
-| **Random Access** | ⚡⚡⚡⚡⚡ | ⭐ |
-| **Add at end** | ⚡⚡⚡⚡ | ⚡⚡⚡⚡⚡ |
-| **Add at beginning** | ⭐ | ⚡⚡⚡⚡⚡ |
-| **Memory Usage** | ⚡⚡⚡⚡⚡ | ⭐⭐ |
-| **Iterator.remove()** | ⭐⭐ | ⚡⚡⚡⚡⚡ |
+| Random Access | ⚡⚡⚡⚡⚡ | ⭐ |
+| Add at end | ⚡⚡⚡⚡ | ⚡⚡⚡⚡⚡ |
+| Add at beginning | ⭐ | ⚡⚡⚡⚡⚡ |
+| Memory Usage | ⚡⚡⚡⚡⚡ | ⭐⭐ |
+| Iterator.remove() | ⭐⭐ | ⚡⚡⚡⚡⚡ |
 
-**Lời khuyên cuối:**
-- Mặc định dùng **ArrayList**
-- Chỉ dùng **LinkedList** khi implement Queue/Deque
+Lời khuyên cuối:
+- Mặc định dùng ArrayList
+- Chỉ dùng LinkedList khi implement Queue/Deque
 - Đo performance thực tế nếu quan trọng
 - Initial capacity cho ArrayList để tránh resize
 
@@ -1662,7 +1652,7 @@ Happy coding with the right List! 🎯
     content: `
 ## JVM Memory Management - Không phải lo memory leak! 🧠
 
-Một trong những lợi thế lớn nhất của Java so với C/C++ là **Automatic Memory Management**. Developer không cần malloc/free, JVM lo hết!
+Một trong những lợi thế lớn nhất của Java so với C/C++ là Automatic Memory Management. Developer không cần malloc/free, JVM lo hết!
 
 Nhưng để optimize performance và debug memory issues, bạn cần hiểu JVM hoạt động thế nào.
 
@@ -1701,7 +1691,7 @@ Nhưng để optimize performance và debug memory issues, bạn cần hiểu JV
 └─────────────────────────────────────────┘
 \`\`\`
 
-**Heap vs Stack - Phân biệt rõ ràng:**
+Heap vs Stack - Phân biệt rõ ràng:
 
 \`\`\`java
 public class MemoryDemo {
@@ -1730,7 +1720,7 @@ class User {
 
 ### Garbage Collection - Thu dọn rác tự động
 
-**1. Minor GC - Young Generation**
+1. Minor GC - Young Generation
 
 \`\`\`
 1. Object được tạo → Eden Space
@@ -1742,12 +1732,12 @@ class User {
 7. Objects sống lâu → Old Generation
 \`\`\`
 
-**2. Major GC - Old Generation**
+2. Major GC - Old Generation
 - Chạy khi Old Gen đầy
 - Stop-the-world event (app pause!)
 - Chậm hơn Minor GC nhiều
 
-**Example Code:**
+Example Code:
 \`\`\`java
 public class GCDemo {
     public static void main(String[] args) {
@@ -1777,7 +1767,7 @@ public class GCDemo {
 
 ### Modern GC Algorithms
 
-**1. G1GC (Default Java 11+)**
+1. G1GC (Default Java 11+)
 - Low latency
 - Predictable pause times
 - Best for most applications
@@ -1786,7 +1776,7 @@ public class GCDemo {
 java -XX:+UseG1GC -Xms2g -Xmx4g -XX:MaxGCPauseMillis=200 MyApp
 \`\`\`
 
-**2. ZGC (Java 15+)**
+2. ZGC (Java 15+)
 - Ultra-low latency (< 10ms pause)
 - Handles TB-sized heaps
 - Perfect for real-time systems
@@ -1795,7 +1785,7 @@ java -XX:+UseG1GC -Xms2g -Xmx4g -XX:MaxGCPauseMillis=200 MyApp
 java -XX:+UseZGC -Xms16g -Xmx16g MyApp
 \`\`\`
 
-**3. Shenandoah**
+3. Shenandoah
 - Concurrent GC
 - Low pause times
 - Good for microservices
@@ -1847,12 +1837,12 @@ public class Cache {
 
 ### Performance Optimization Tips
 
-✅ **Set initial heap size:**
+✅ Set initial heap size:
 \`\`\`bash
 java -Xms4g -Xmx4g  # Same min & max → No resize overhead
 \`\`\`
 
-✅ **Reuse objects:**
+✅ Reuse objects:
 \`\`\`java
 // ❌ Creates many objects
 for (int i = 0; i < 1000000; i++) {
@@ -1867,7 +1857,7 @@ for (int i = 0; i < 1000000; i++) {
 }
 \`\`\`
 
-✅ **Use primitives when possible:**
+✅ Use primitives when possible:
 \`\`\`java
 // ❌ Boxing creates objects
 List<Integer> nums = new ArrayList<>();
@@ -1878,7 +1868,7 @@ int[] nums = new int[1000];
 
 ### Kết luận
 
-JVM Memory Management = **Fire and forget**:
+JVM Memory Management = Fire and forget:
 
 ✅ Không cần malloc/free
 ✅ GC tự động clean up
@@ -1886,7 +1876,7 @@ JVM Memory Management = **Fire and forget**:
 ✅ Tune được performance
 ✅ Memory safe (no dangling pointers)
 
-**Remember:** Hiểu JVM = Code Java như pro! 🚀
+Remember: Hiểu JVM = Code Java như pro! 🚀
     `,
     category: "Java",
     date: "2025-10-12",
@@ -1904,22 +1894,22 @@ JVM Memory Management = **Fire and forget**:
     content: `
 ## JavaScript ES6+ - Revolution in Web Development 🚀
 
-ECMAScript 2015 (ES6) đã cách mạng hóa JavaScript, biến nó từ một ngôn ngữ đơn giản thành một trong những ngôn ngữ mạnh mẽ nhất. Với **12 tỷ thiết bị chạy JavaScript** và tất cả các trình duyệt web hiện đại, ES6+ là must-have skill cho mọi web developer.
+ECMAScript 2015 (ES6) đã cách mạng hóa JavaScript, biến nó từ một ngôn ngữ đơn giản thành một trong những ngôn ngữ mạnh mẽ nhất. Với 12 tỷ thiết bị chạy JavaScript và tất cả các trình duyệt web hiện đại, ES6+ là must-have skill cho mọi web developer.
 
 ### Tại sao ES6+ quan trọng?
 
-**1. Modern Syntax - Code đẹp hơn, ngắn gọn hơn**
+1. Modern Syntax - Code đẹp hơn, ngắn gọn hơn
 - Arrow functions: Giảm 50% dòng code
 - Destructuring: Trích xuất data siêu nhanh
 - Template literals: String interpolation dễ đọc
 - Spread operator: Clone & merge objects/arrays dễ dàng
 
-**2. Better Async Handling**
+2. Better Async Handling
 - Promises: Tạm biệt callback hell
 - Async/Await: Code bất đồng bộ như đồng bộ
 - Fetch API: HTTP requests hiện đại
 
-**3. Module System**
+3. Module System
 - Import/Export: Code modular, reusable
 - Tree shaking: Bundle size nhỏ hơn
 - Dynamic imports: Load code on demand
@@ -2416,11 +2406,11 @@ async function loadUserPosts(userId) {
 
 ES6+ đã biến JavaScript từ "toy language" thành một trong những ngôn ngữ mạnh nhất:
 
-✅ **Modern Syntax**: Code ngắn gọn, dễ đọc
-✅ **Async/Await**: Xử lý bất đồng bộ như pro
-✅ **Modules**: Code modular, maintainable
-✅ **Arrow Functions**: Giải quyết this binding
-✅ **Destructuring**: Trích xuất data siêu nhanh
+✅ Modern Syntax: Code ngắn gọn, dễ đọc
+✅ Async/Await: Xử lý bất đồng bộ như pro
+✅ Modules: Code modular, maintainable
+✅ Arrow Functions: Giải quyết this binding
+✅ Destructuring: Trích xuất data siêu nhanh
 
 Master ES6+ = Master Modern Web Development! 🎯
     `,
@@ -2641,8 +2631,8 @@ function Dropdown() {
 
 ### Rules of Hooks
 
-✅ **Chỉ gọi ở top level** (không trong loops/conditions)
-✅ **Chỉ gọi trong React functions** (components/custom hooks)
+✅ Chỉ gọi ở top level (không trong loops/conditions)
+✅ Chỉ gọi trong React functions (components/custom hooks)
 
 \`\`\`javascript
 // ❌ WRONG
@@ -2678,9 +2668,9 @@ Happy Hooking! 🎣
     content: `
 ## Node.js Event Loop - Single-threaded nhưng không block! 🔄
 
-Node.js chạy JavaScript trên server với một đặc điểm độc đáo: **Single-threaded** nhưng vẫn handle **hàng nghìn connections** cùng lúc!
+Node.js chạy JavaScript trên server với một đặc điểm độc đáo: Single-threaded nhưng vẫn handle hàng nghìn connections cùng lúc!
 
-Bí mật nằm ở **Event Loop** - cơ chế non-blocking I/O siêu mạnh.
+Bí mật nằm ở Event Loop - cơ chế non-blocking I/O siêu mạnh.
 
 ### Event Loop Visualization
 
@@ -2727,7 +2717,7 @@ console.log('4. End');
 // 2. Timeout  (Macrotask queue)
 \`\`\`
 
-**Giải thích:**
+Giải thích:
 1. Synchronous code chạy trước (1, 4)
 2. Microtasks (Promises) chạy sau
 3. Macrotasks (setTimeout) chạy cuối
@@ -2831,10 +2821,10 @@ worker.postMessage({ data: 'process this' });
 
 ### Performance Tips
 
-✅ **Avoid blocking operations**
-✅ **Use async/await for clarity**
-✅ **Worker threads for CPU tasks**
-✅ **Cluster for multi-core CPUs**
+✅ Avoid blocking operations
+✅ Use async/await for clarity
+✅ Worker threads for CPU tasks
+✅ Cluster for multi-core CPUs
 
 Event Loop = Node.js Superpower! ⚡
     `,
@@ -2854,11 +2844,11 @@ Event Loop = Node.js Superpower! ⚡
 
 TypeScript = JavaScript + Types. Nghe đơn giản nhưng impact cực lớn! Microsoft tạo ra TypeScript để giải quyết pain points của JavaScript trong large-scale applications.
 
-**Fact:** Hơn 60% JavaScript projects mới bắt đầu với TypeScript!
+Fact: Hơn 60% JavaScript projects mới bắt đầu với TypeScript!
 
 ### Why TypeScript?
 
-**1. Type Safety - Bắt lỗi sớm**
+1. Type Safety - Bắt lỗi sớm
 \`\`\`typescript
 // ❌ JavaScript - Lỗi runtime
 function add(a, b) {
@@ -2873,7 +2863,7 @@ function add(a: number, b: number): number {
 add(5, "10");  // ❌ Error: string not assignable to number
 \`\`\`
 
-**2. IntelliSense - Autocomplete tuyệt vời**
+2. IntelliSense - Autocomplete tuyệt vời
 \`\`\`typescript
 interface User {
     id: number;
@@ -2893,7 +2883,7 @@ const user: User = {
 console.log(user.  // ← Autocomplete!
 \`\`\`
 
-**3. Refactoring an toàn**
+3. Refactoring an toàn
 - Đổi tên variable/function → tự động update tất cả
 - Compiler báo lỗi nếu có chỗ nào bị miss
 
@@ -3074,15 +3064,15 @@ type ReadonlyUser = Readonly<User>;
 
 ### Khi nào dùng TypeScript?
 
-✅ **Large projects** (>10k LOC)
-✅ **Team projects** (multiple developers)
-✅ **Long-term maintenance**
-✅ **Complex business logic**
-✅ **Library/Framework development**
+✅ Large projects (>10k LOC)
+✅ Team projects (multiple developers)
+✅ Long-term maintenance
+✅ Complex business logic
+✅ Library/Framework development
 
-❌ **Prototypes** (quá nặng)
-❌ **Simple scripts** (overkill)
-❌ **Learning JavaScript** (học JS trước)
+❌ Prototypes (quá nặng)
+❌ Simple scripts (overkill)
+❌ Learning JavaScript (học JS trước)
 
 ### Migration từ JavaScript
 
@@ -3100,7 +3090,7 @@ npx tsc --init
 // Start with 'any', then improve
 \`\`\`
 
-TypeScript = **Better JavaScript** for serious projects! 🎯
+TypeScript = Better JavaScript for serious projects! 🎯
     `,
     category: "JavaScript",
     date: "2025-10-02",
@@ -3118,21 +3108,21 @@ TypeScript = **Better JavaScript** for serious projects! 🎯
     content: `
 ## Java vs JavaScript: Battle of the Giants 🥊
 
-Nhiều người nhầm lẫn rằng Java và JavaScript có liên quan với nhau vì tên giống nhau. Sự thật là: **Chúng khác biệt hoàn toàn**! Giống như Car và Carpet chỉ giống nhau ở chữ "Car" vậy.
+Nhiều người nhầm lẫn rằng Java và JavaScript có liên quan với nhau vì tên giống nhau. Sự thật là: Chúng khác biệt hoàn toàn! Giống như Car và Carpet chỉ giống nhau ở chữ "Car" vậy.
 
 Hãy phân tích chi tiết sự khác biệt và khi nào nên dùng ngôn ngữ nào.
 
 ### Lịch sử và Nguồn gốc
 
-**Java (1995 - Sun Microsystems/Oracle)**
+Java (1995 - Sun Microsystems/Oracle)
 - Tạo bởi James Gosling tại Sun Microsystems
 - Ban đầu tên "Oak", sau đổi thành Java (đảo ở Indonesia)
 - Mục tiêu: "Write Once, Run Anywhere" - độc lập nền tảng
 - Ngôn ngữ OOP thuần túy cho enterprise
 - Slogan: ☕ "Java: The power of simplicity"
 
-**JavaScript (1995 - Netscape)**
-- Tạo bởi Brendan Eich chỉ trong **10 ngày**!
+JavaScript (1995 - Netscape)
+- Tạo bởi Brendan Eich chỉ trong 10 ngày!
 - Ban đầu tên "Mocha" → "LiveScript" → "JavaScript" (marketing!)
 - Đặt tên "JavaScript" để lợi dụng sự nổi tiếng của Java
 - Ngôn ngữ scripting cho trình duyệt web
@@ -3140,7 +3130,7 @@ Hãy phân tích chi tiết sự khác biệt và khi nào nên dùng ngôn ng�
 
 ### 1. Type System - Sự khác biệt cốt lõi
 
-**Java - Strongly Typed & Static Typing**
+Java - Strongly Typed & Static Typing
 
 \`\`\`java
 // Phải khai báo type rõ ràng
@@ -3166,7 +3156,7 @@ names.add("Đăng");
 String first = names.get(0);  // Không cần cast
 \`\`\`
 
-**JavaScript - Weakly Typed & Dynamic Typing**
+JavaScript - Weakly Typed & Dynamic Typing
 
 \`\`\`javascript
 // Không cần khai báo type
@@ -3193,7 +3183,7 @@ console.log(true + 1);  // 2 (true = 1)
 console.log([] + {});  // "[object Object]" 🤯
 \`\`\`
 
-**So sánh:**
+So sánh:
 | Khía cạnh | Java | JavaScript |
 |-----------|------|------------|
 | Type checking | Compile time | Runtime |
@@ -3203,7 +3193,7 @@ console.log([] + {});  // "[object Object]" 🤯
 
 ### 2. Paradigm - Mô hình lập trình
 
-**Java - Pure Object-Oriented Programming**
+Java - Pure Object-Oriented Programming
 
 \`\`\`java
 // Mọi thứ phải trong class
@@ -3247,7 +3237,7 @@ public interface Programmable {
 // Không thể có function độc lập - phải trong class!
 \`\`\`
 
-**JavaScript - Multi-Paradigm (OOP + Functional + Procedural)**
+JavaScript - Multi-Paradigm (OOP + Functional + Procedural)
 
 \`\`\`javascript
 // 1. Procedural - Functions độc lập
@@ -3305,7 +3295,7 @@ operation(5, 3, (x, y) => x * y);  // 15
 
 ### 3. Compilation vs Interpretation
 
-**Java - Compiled Language**
+Java - Compiled Language
 
 \`\`\`
 Source Code (.java)
@@ -3321,18 +3311,18 @@ Machine Code
 Execution
 \`\`\`
 
-**Ưu điểm:**
+Ưu điểm:
 ✅ Phát hiện lỗi sớm (compile time)
 ✅ Performance tốt (JIT optimization)
 ✅ Type safety
 ✅ Refactoring dễ dàng
 
-**Nhược điểm:**
+Nhược điểm:
 ❌ Compile step làm chậm development
 ❌ Code dài dòng hơn
 ❌ Khó debug bytecode
 
-**JavaScript - Interpreted/JIT Compiled**
+JavaScript - Interpreted/JIT Compiled
 
 \`\`\`
 Source Code (.js)
@@ -3346,20 +3336,20 @@ JIT Compiler (V8, SpiderMonkey)
 Execution
 \`\`\`
 
-**Ưu điểm:**
+Ưu điểm:
 ✅ Rapid development (không cần compile)
 ✅ Dynamic typing - linh hoạt
 ✅ Easy debugging trong browser
 ✅ Hot reloading
 
-**Nhược điểm:**
+Nhược điểm:
 ❌ Lỗi phát hiện lúc runtime
 ❌ Performance thấp hơn Java (nhưng V8 rất nhanh)
 ❌ Khó maintain dự án lớn (TypeScript giải quyết)
 
 ### 4. Concurrency Model - Xử lý đồng thời
 
-**Java - Multi-threading & Shared Memory**
+Java - Multi-threading & Shared Memory
 
 \`\`\`java
 // Traditional Threads
@@ -3419,7 +3409,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 }
 \`\`\`
 
-**JavaScript - Single-threaded & Event Loop**
+JavaScript - Single-threaded & Event Loop
 
 \`\`\`javascript
 // Event Loop - Non-blocking I/O
@@ -3470,7 +3460,7 @@ worker.onmessage = (e) => {
 };
 \`\`\`
 
-**So sánh Concurrency:**
+So sánh Concurrency:
 | Java | JavaScript |
 |------|------------|
 | Multi-threaded | Single-threaded |
@@ -3481,7 +3471,7 @@ worker.onmessage = (e) => {
 
 ### 5. Performance Comparison
 
-**Benchmark - Fibonacci(40)**
+Benchmark - Fibonacci(40)
 
 \`\`\`java
 // Java
@@ -3501,15 +3491,15 @@ function fib(n) {
 // Time: ~1.2s
 \`\`\`
 
-**Kết quả:**
-- **CPU-intensive tasks**: Java nhanh hơn 2-3x
-- **I/O operations**: JavaScript nhanh hơn (non-blocking)
-- **Startup time**: JavaScript nhanh hơn (no JVM warmup)
-- **Memory**: Java tốt hơn cho large datasets
+Kết quả:
+- CPU-intensive tasks: Java nhanh hơn 2-3x
+- I/O operations: JavaScript nhanh hơn (non-blocking)
+- Startup time: JavaScript nhanh hơn (no JVM warmup)
+- Memory: Java tốt hơn cho large datasets
 
 ### 6. Ecosystem & Frameworks
 
-**Java Ecosystem**
+Java Ecosystem
 
 \`\`\`
 Build Tools:
@@ -3533,7 +3523,7 @@ Deployment:
 - Tomcat, Jetty
 \`\`\`
 
-**JavaScript Ecosystem**
+JavaScript Ecosystem
 
 \`\`\`
 Package Managers:
@@ -3566,9 +3556,9 @@ Build Tools:
 
 ### 7. Use Cases - Khi nào dùng gì?
 
-**Java - Best for:**
+Java - Best for:
 
-✅ **Enterprise Applications**
+✅ Enterprise Applications
 \`\`\`java
 @SpringBootApplication
 public class BankingApplication {
@@ -3580,24 +3570,24 @@ public class BankingApplication {
 }
 \`\`\`
 
-✅ **Android Development**
+✅ Android Development
 - 2.5 tỷ thiết bị Android
 - Kotlin (chạy trên JVM) - official language
 - Native performance
 
-✅ **Big Data**
+✅ Big Data
 - Hadoop: Distributed storage & processing
 - Spark: Real-time analytics
 - Kafka: Event streaming
 
-✅ **Trading Systems**
+✅ Trading Systems
 - Low latency
 - High throughput
 - Reliability
 
-**JavaScript - Best for:**
+JavaScript - Best for:
 
-✅ **Web Development (Frontend)**
+✅ Web Development (Frontend)
 \`\`\`javascript
 // React Component
 function ProductCard({ product }) {
@@ -3613,18 +3603,18 @@ function ProductCard({ product }) {
 }
 \`\`\`
 
-✅ **Backend (Node.js)**
+✅ Backend (Node.js)
 - RESTful APIs
 - Real-time apps (Socket.io)
 - Microservices
 - Server-side rendering
 
-✅ **Full-stack Development**
+✅ Full-stack Development
 - MERN Stack (MongoDB, Express, React, Node)
 - Next.js (React framework)
 - Một ngôn ngữ cho cả frontend + backend
 
-✅ **Real-time Applications**
+✅ Real-time Applications
 - Chat applications
 - Live dashboards
 - Online gaming
@@ -3632,33 +3622,33 @@ function ProductCard({ product }) {
 
 ### 8. Learning Curve
 
-**Java:**
-- 📚 **Cao hơn**: Phải học OOP concepts, type system, JVM
-- ⏰ **Thời gian**: 6-12 tháng để thành thạo
-- 🎯 **Suitable for**: Người muốn hiểu sâu computer science
-- 💼 **Job market**: Enterprise, big companies
+Java:
+- 📚 Cao hơn: Phải học OOP concepts, type system, JVM
+- ⏰ Thời gian: 6-12 tháng để thành thạo
+- 🎯 Suitable for: Người muốn hiểu sâu computer science
+- 💼 Job market: Enterprise, big companies
 
-**JavaScript:**
-- 📚 **Thấp hơn**: Syntax đơn giản, flexible
-- ⏰ **Thời gian**: 3-6 tháng để bắt đầu làm việc
-- 🎯 **Suitable for**: Rapid prototyping, web dev
-- 💼 **Job market**: Startups, web agencies, full-stack
+JavaScript:
+- 📚 Thấp hơn: Syntax đơn giản, flexible
+- ⏰ Thời gian: 3-6 tháng để bắt đầu làm việc
+- 🎯 Suitable for: Rapid prototyping, web dev
+- 💼 Job market: Startups, web agencies, full-stack
 
 ### 9. Salary Comparison (Vietnam - 2025)
 
-**Java Developer:**
+Java Developer:
 - Fresher: 8-15 triệu VNĐ
 - Junior (1-2 năm): 15-25 triệu
 - Middle (2-4 năm): 25-40 triệu
 - Senior (4+ năm): 40-80 triệu
 
-**JavaScript Developer:**
+JavaScript Developer:
 - Fresher: 8-12 triệu VNĐ
 - Junior (1-2 năm): 12-20 triệu
 - Middle (2-4 năm): 20-35 triệu
 - Senior (4+ năm): 35-70 triệu
 
-**Full-stack (Java + JavaScript):**
+Full-stack (Java + JavaScript):
 - Middle: 30-45 triệu
 - Senior: 50-100 triệu 💰
 
@@ -3666,55 +3656,55 @@ function ProductCard({ product }) {
 
 | Tiêu chí | Java ☕ | JavaScript 🚀 |
 |----------|---------|---------------|
-| **Type System** | Static, Strong | Dynamic, Weak |
-| **Paradigm** | OOP | Multi-paradigm |
-| **Platform** | JVM (cross-platform) | Browser + Node.js |
-| **Concurrency** | Multi-threading | Event loop |
-| **Performance** | Cao (CPU tasks) | Cao (I/O tasks) |
-| **Startup Time** | Chậm (JVM warmup) | Nhanh |
-| **Learning Curve** | Cao | Trung bình |
-| **Ecosystem** | Mature, stable | Fast-paced |
-| **Mobile** | Android native | React Native |
-| **Best For** | Enterprise, Backend | Web, Full-stack |
-| **Salary** | Cao hơn | Trung bình |
-| **Job Openings** | Nhiều (enterprise) | Rất nhiều (web) |
+| Type System | Static, Strong | Dynamic, Weak |
+| Paradigm | OOP | Multi-paradigm |
+| Platform | JVM (cross-platform) | Browser + Node.js |
+| Concurrency | Multi-threading | Event loop |
+| Performance | Cao (CPU tasks) | Cao (I/O tasks) |
+| Startup Time | Chậm (JVM warmup) | Nhanh |
+| Learning Curve | Cao | Trung bình |
+| Ecosystem | Mature, stable | Fast-paced |
+| Mobile | Android native | React Native |
+| Best For | Enterprise, Backend | Web, Full-stack |
+| Salary | Cao hơn | Trung bình |
+| Job Openings | Nhiều (enterprise) | Rất nhiều (web) |
 
 ### Kết luận: Nên học ngôn ngữ nào?
 
-**Chọn Java nếu bạn:**
+Chọn Java nếu bạn:
 ✅ Muốn làm việc cho công ty lớn, ngân hàng
 ✅ Thích code có structure rõ ràng
 ✅ Quan tâm đến type safety
 ✅ Làm Android development
 ✅ Muốn hiểu sâu OOP và computer science
 
-**Chọn JavaScript nếu bạn:**
+Chọn JavaScript nếu bạn:
 ✅ Muốn trở thành web developer
 ✅ Thích rapid development
 ✅ Làm freelance hoặc startup
 ✅ Muốn làm full-stack với 1 ngôn ngữ
 ✅ Quan tâm đến frontend + UI/UX
 
-**Lời khuyên của mình:**
+Lời khuyên của mình:
 
-💡 **Học CẢ HAI!**
+💡 Học CẢ HAI!
 
-1. **Bắt đầu với JavaScript**:
+1. Bắt đầu với JavaScript:
    - Dễ học hơn
    - Thấy kết quả nhanh (UI trên browser)
    - Job openings nhiều
 
-2. **Sau đó học Java**:
+2. Sau đó học Java:
    - Hiểu sâu OOP principles
    - Type system giúp code quality tốt hơn
    - Mở ra cơ hội enterprise
 
-3. **Kết hợp cả hai**:
+3. Kết hợp cả hai:
    - Backend: Java Spring Boot
    - Frontend: React/Vue
    - Become Full-stack Engineer!
 
-**Quan trọng nhất:** Không có ngôn ngữ nào "tốt nhất". Mỗi ngôn ngữ có điểm mạnh riêng. Master fundamentals (algorithms, data structures, design patterns) quan trọng hơn ngôn ngữ cụ thể!
+Quan trọng nhất: Không có ngôn ngữ nào "tốt nhất". Mỗi ngôn ngữ có điểm mạnh riêng. Master fundamentals (algorithms, data structures, design patterns) quan trọng hơn ngôn ngữ cụ thể!
 
 Happy coding! 🚀☕
     `,

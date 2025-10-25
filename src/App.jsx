@@ -1,27 +1,23 @@
 import React from "react";
 import "./App.css";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { Navbar, Footer, PageTransition } from "./components";
+import { Navbar, Footer, PageTransition, MusicPlayer } from "./components";
 import { About, Contact, Home, Projects, Blog } from "./pages";
 
 function AnimatedRoutes() {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const isHomePage = location.pathname === "/home";
 
   return (
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route
-            path="/"
+            path="/home"
             element={
               <PageTransition>
                 <Home />
@@ -70,10 +66,9 @@ function AnimatedRoutes() {
 const App = () => {
   return (
     <main className="bg-slate-300/20 min-h-screen">
-      <Router>
-        <Navbar />
-        <AnimatedRoutes />
-      </Router>
+      <Navbar />
+      <AnimatedRoutes />
+      <MusicPlayer />
     </main>
   );
 };

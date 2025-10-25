@@ -37,20 +37,28 @@ body:has(.card[data-color="green"]:hover) {
 .max-container {
   max-width: 64rem;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-bottom: 3rem;
-  min-height: calc(100vh - 80px);
-  padding-top: 126px;
+  min-height: calc(100vh - 60px);
+  padding-top: 80px;
+}
+
+@media (min-width: 640px) {
+  .max-container {
+    padding-inline: 2rem;
+    min-height: calc(100vh - 80px);
+    padding-top: 126px;
+  }
 }
 
 .head-text {
-  font-size: clamp(1.875rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 700;
   font-family: "Dosis", sans-serif;
 }
 
 .subhead-text {
-  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-size: clamp(1.125rem, 5vw, 2rem);
   font-weight: 600;
   font-family: "Dosis", sans-serif;
 }
@@ -150,6 +158,12 @@ body:has(.card[data-color="green"]:hover) {
 .btn-back-orange {
   background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
 }
+.btn-back-pink {
+  background: linear-gradient(135deg, #ff6ec4 -20%, #7873f5 120%);
+}
+.btn-back-red {
+  background: linear-gradient(135deg, #ff416c -20%, #ff4b2b 120%);
+}
 .btn-back-black {
   background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
 }
@@ -160,8 +174,8 @@ body:has(.card[data-color="green"]:hover) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 3rem 2rem;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
   background: linear-gradient(
     135deg,
     rgba(0, 198, 255, 0.1),
@@ -171,11 +185,24 @@ body:has(.card[data-color="green"]:hover) {
   margin-top: 2rem;
 }
 
+@media (min-width: 640px) {
+  .cta {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+}
+
 .cta-text {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
   text-align: center;
   color: var(--color-black-500);
+}
+
+@media (min-width: 640px) {
+  .cta-text {
+    font-size: 1.5rem;
+  }
 }
 
 /* Skill & Experience Cards */
