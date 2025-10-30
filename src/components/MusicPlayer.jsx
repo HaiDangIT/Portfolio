@@ -105,14 +105,14 @@ const MusicPlayer = () => {
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-50 group/player"
+      className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 group/player"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`relative backdrop-blur-lg rounded-full shadow-xl transition-all duration-700 ease-out flex items-center ${
           isHovered
-            ? "bg-gradient-to-br from-black/90 to-gray-900/90 border border-white/20 px-6 py-1.5 shadow-2xl shadow-blue-500/30 scale-105"
+            ? "bg-gradient-to-br from-black/90 to-gray-900/90 border border-white/20 px-3 sm:px-6 py-1.5 shadow-2xl shadow-blue-500/30 scale-105"
             : "p-0 hover:scale-110"
         }`}
       >
@@ -136,14 +136,14 @@ const MusicPlayer = () => {
           onClick={togglePlay}
           className={`relative rounded-full flex items-center justify-center active:scale-95 transition-all duration-300 shrink-0 ${
             isHovered
-              ? "w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 hover:scale-110 shadow-lg hover:shadow-blue-500/50"
+              ? "w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-purple-600 hover:scale-110 shadow-lg hover:shadow-blue-500/50"
               : "w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 shadow-2xl shadow-blue-500/50 m-2"
           }`}
         >
           {isPlaying ? (
             <svg
               className={`text-white drop-shadow-lg ${
-                isHovered ? "w-5 h-5" : "w-5 h-5 animate-pulse"
+                isHovered ? "w-4 h-4 sm:w-5 sm:h-5" : "w-5 h-5 animate-pulse"
               }`}
               fill="currentColor"
               viewBox="0 0 24 24"
@@ -153,7 +153,7 @@ const MusicPlayer = () => {
           ) : (
             <svg
               className={`text-white ml-0.5 drop-shadow-lg ${
-                isHovered ? "w-5 h-5" : "w-5 h-5"
+                isHovered ? "w-4 h-4 sm:w-5 sm:h-5" : "w-5 h-5"
               }`}
               fill="currentColor"
               viewBox="0 0 24 24"
@@ -167,23 +167,23 @@ const MusicPlayer = () => {
         <div
           className={`flex flex-col transition-all duration-700 ease-out ${
             isHovered
-              ? "max-w-[400px] opacity-100 translate-x-0 ml-4"
+              ? "max-w-[240px] sm:max-w-[400px] opacity-100 translate-x-0 ml-2 sm:ml-4"
               : "max-w-0 opacity-0 translate-x-4"
           } overflow-hidden`}
         >
           {/* Song Info */}
-          <div className="flex items-center mb-3">
+          <div className="flex items-center mb-2 sm:mb-3">
             <div className="flex-1 min-w-0">
-              <div className="text-white text-sm font-semibold truncate">
+              <div className="text-white text-xs sm:text-sm font-semibold truncate">
                 🎵 {songInfo.name}
               </div>
-              <div className="text-white/60 text-xs truncate">
+              <div className="text-white/60 text-[10px] sm:text-xs truncate">
                 {songInfo.artist}
               </div>
             </div>
 
             {/* Volume */}
-            <div className="flex items-center shrink-0 ml-2">
+            <div className="hidden sm:flex items-center shrink-0 ml-2">
               <svg
                 className="w-4 h-4 text-white/50 shrink-0 mr-2"
                 fill="currentColor"
@@ -214,11 +214,11 @@ const MusicPlayer = () => {
             <div className="flex items-center shrink-0">
               <button
                 onClick={handlePrev}
-                className="text-white/50 hover:text-white hover:scale-110 active:scale-95 transition-all duration-200 p-1 hover:bg-white/10 rounded-full mr-1"
+                className="text-white/50 hover:text-white hover:scale-110 active:scale-95 transition-all duration-200 p-1 hover:bg-white/10 rounded-full mr-0.5 sm:mr-1"
                 title="Bài trước"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-3 h-3 sm:w-4 sm:h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -232,7 +232,7 @@ const MusicPlayer = () => {
                 title="Bài tiếp"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="w-3 h-3 sm:w-4 sm:h-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -242,8 +242,8 @@ const MusicPlayer = () => {
             </div>
 
             {/* Progress Bar */}
-            <div className="flex items-center ml-3 flex-1 min-w-0">
-              <span className="text-white/70 text-[10px] font-mono shrink-0 tabular-nums mr-2">
+            <div className="flex items-center ml-2 sm:ml-3 flex-1 min-w-0">
+              <span className="text-white/70 text-[9px] sm:text-[10px] font-mono shrink-0 tabular-nums mr-1 sm:mr-2">
                 {formatTime(currentTime)}
               </span>
               <div className="relative flex-1">
@@ -253,7 +253,7 @@ const MusicPlayer = () => {
                   max={duration || 0}
                   value={currentTime}
                   onChange={handleSeek}
-                  className="w-full h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer transition-all duration-200"
+                  className="w-full h-1 sm:h-1.5 bg-white/10 rounded-full appearance-none cursor-pointer transition-all duration-200"
                   style={{
                     background: `linear-gradient(to right, #3b82f6 ${
                       (currentTime / duration) * 100 || 0
@@ -263,7 +263,7 @@ const MusicPlayer = () => {
                   }}
                 />
               </div>
-              <span className="text-white/70 text-[10px] font-mono shrink-0 tabular-nums ml-2">
+              <span className="text-white/70 text-[9px] sm:text-[10px] font-mono shrink-0 tabular-nums ml-1 sm:ml-2">
                 {formatTime(duration)}
               </span>
             </div>

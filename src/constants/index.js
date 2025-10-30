@@ -150,7 +150,7 @@ export const experiences = [
 export const education = {
   school: "Đại học Công nghệ TP.HCM",
   degree: "Cử nhân Công nghệ Thông tin",
-  period: "2022 - Hiện tại",
+  period: "2022 - 2026",
   description: "Chuyên ngành: Công nghệ Phần mềm",
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
@@ -10,6 +11,12 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+
+  const [headerRef, headerVisible] = useScrollReveal({ threshold: 0.2 });
+  const [formRef, formVisible] = useScrollReveal({ threshold: 0.2 });
+  const [contactInfoRef, contactInfoVisible] = useScrollReveal({
+    threshold: 0.2,
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,21 +70,39 @@ const Contact = () => {
     <section className="max-container relative">
       {alert.show && <Alert {...alert} />}
 
-      <h1 className="head-text">
-        Liên Hệ{" "}
-        <span className="blue-gradient_text font-semibold drop-shadow">📬</span>
-      </h1>
+      <div
+        ref={headerRef}
+        className={`transition-all duration-1000 ${
+          headerVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <h1 className="head-text">
+          Liên Hệ{" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            📬
+          </span>
+        </h1>
 
-      <div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3 text-slate-500">
-        <p className="text-sm sm:text-base md:text-lg">
-          Bạn có dự án muốn thảo luận? Hay đơn giản chỉ muốn chat về công nghệ?
-          Hãy gửi tin nhắn cho tôi nhé!
-        </p>
+        <div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3 text-slate-500">
+          <p className="text-sm sm:text-base md:text-lg">
+            Bạn có dự án muốn thảo luận? Hay đơn giản chỉ muốn chat về công
+            nghệ? Hãy gửi tin nhắn cho tôi nhé!
+          </p>
+        </div>
       </div>
 
       <div className="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12">
         {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-2 border-gray-100">
+        <div
+          ref={formRef}
+          className={`bg-white rounded-2xl shadow-xl p-6 sm:p-8 border-2 border-gray-100 transition-all duration-1000 ${
+            formVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
             <span>✉️</span> Gửi Tin Nhắn
           </h2>
@@ -162,7 +187,7 @@ const Contact = () => {
                 </span>
               ) : (
                 <span className="flex items-center justify-center gap-2">
-                  <span>🚀</span> Gửi Tin Nhắn
+                  Gửi Tin Nhắn
                 </span>
               )}
             </button>
@@ -170,7 +195,14 @@ const Contact = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="space-y-4 sm:space-y-6">
+        <div
+          ref={contactInfoRef}
+          className={`space-y-4 sm:space-y-6 transition-all duration-1000 delay-200 ${
+            contactInfoVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
           {/* Contact Info Cards */}
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 sm:p-8 border-2 border-blue-100">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">

@@ -3,10 +3,17 @@ import { Link } from "react-router-dom";
 import { projects } from "../constants";
 import { arrow } from "../assets/icons";
 import CTA from "../components/CTA";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredProject, setHoveredProject] = useState(null);
+
+  const [headerRef, headerVisible] = useScrollReveal({ threshold: 0.2 });
+  const [filterRef, filterVisible] = useScrollReveal({ threshold: 0.2 });
+  const [projectsRef, projectsVisible] = useScrollReveal({ threshold: 0.1 });
+  const [statsRef, statsVisible] = useScrollReveal({ threshold: 0.2 });
+  const [techStackRef, techStackVisible] = useScrollReveal({ threshold: 0.2 });
 
   const categories = [
     { name: "All", icon: "🎯", count: projects.length },
@@ -35,7 +42,12 @@ const Projects = () => {
   return (
     <section className="max-container">
       {/* Header Section with Animation */}
-      <div className="relative">
+      <div
+        ref={headerRef}
+        className={`relative transition-all duration-1000 ${
+          headerVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <h1 className="head-text">
           Dự Án Của Tôi{" "}
           <span className="blue-gradient_text font-semibold drop-shadow animate-pulse">
@@ -47,7 +59,11 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3 text-slate-500">
+      <div
+        className={`mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3 text-slate-500 transition-all duration-1000 ${
+          headerVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <p className="text-sm sm:text-base md:text-lg">
           Đây là tổng hợp các dự án mà tôi đã thực hiện, từ các ứng dụng
           full-stack đến các website frontend hiện đại. Mỗi dự án đều được xây
@@ -56,7 +72,12 @@ const Projects = () => {
       </div>
 
       {/* Category Filter with Icons */}
-      <div className="mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-4 justify-center">
+      <div
+        ref={filterRef}
+        className={`mt-8 sm:mt-12 flex flex-wrap gap-2 sm:gap-4 justify-center transition-all duration-1000 ${
+          filterVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {categories.map((category) => (
           <button
             key={category.name}
@@ -115,13 +136,23 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div
+        ref={projectsRef}
+        className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
         {filteredProjects.map((project, index) => (
           <div
             key={`project-${index}`}
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
-            className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-gray-100 hover:border-blue-300 transform hover:-translate-y-2"
+            className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-1000 overflow-hidden border-2 border-gray-100 hover:border-blue-300 transform hover:-translate-y-2 ${
+              projectsVisible
+                ? "opacity-100 translate-x-0"
+                : index % 2 === 0
+                ? "opacity-0 -translate-x-20"
+                : "opacity-0 translate-x-20"
+            }`}
+            style={{ transitionDelay: `${index * 150}ms` }}
           >
             {/* Card Header with Icon */}
             <div
@@ -160,9 +191,9 @@ const Projects = () => {
                   {project.name}
                 </h3>
                 <span className="inline-block mt-2 px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full border border-white/30">
-                  {project.category === "Full-stack Web" && "🌐 "}
-                  {project.category === "Frontend" && "🎨 "}
-                  {project.category === "Game" && "🎮 "}
+                  {project.category === "Full-stack Web"}
+                  {project.category === "Frontend"}
+                  {project.category === "Game"}
                   {project.category}
                 </span>
               </div>
@@ -188,7 +219,7 @@ const Projects = () => {
                     key={idx}
                     className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-50 text-blue-700 text-[10px] sm:text-xs font-medium rounded-full border border-blue-200 hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-default"
                   >
-                    💻 {tech}
+                    {tech}
                   </span>
                 ))}
               </div>
@@ -214,14 +245,6 @@ const Projects = () => {
 
             {/* Hover Effect Border Glow */}
             <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-400 rounded-2xl transition-all duration-500 pointer-events-none opacity-0 group-hover:opacity-100"></div>
-
-            {/* Corner Badge */}
-            <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-yellow-400 text-yellow-900 text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full flex items-center gap-0.5 sm:gap-1">
-                <span>⭐</span>
-                <span>Featured</span>
-              </div>
-            </div>
           </div>
         ))}
       </div>
@@ -240,7 +263,14 @@ const Projects = () => {
       )}
 
       {/* Stats Section with Icons */}
-      <div className="mt-12 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div
+        ref={statsRef}
+        className={`mt-12 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 transition-all duration-1000 ${
+          statsVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="relative group bg-gradient-to-br from-blue-50 to-cyan-50 p-4 sm:p-6 rounded-2xl text-center border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl cursor-pointer overflow-hidden">
           <div className="absolute -top-6 sm:-top-8 -right-6 sm:-right-8 text-6xl sm:text-8xl opacity-5 group-hover:opacity-10 transition-opacity">
             📁
@@ -303,7 +333,14 @@ const Projects = () => {
       </div>
 
       {/* Tech Stack Showcase */}
-      <div className="mt-12 sm:mt-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-blue-200">
+      <div
+        ref={techStackRef}
+        className={`mt-12 sm:mt-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-blue-200 transition-all duration-1000 ${
+          techStackVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-2 sm:gap-3">
             <span>🛠️</span>

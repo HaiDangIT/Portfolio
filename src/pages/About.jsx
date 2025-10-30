@@ -9,11 +9,29 @@ import {
 } from "../constants";
 import { avatar } from "../assets/images";
 import CTA from "../components/CTA";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const About = () => {
+  const [headerRef, headerVisible] = useScrollReveal({ threshold: 0.2 });
+  const [skillsRef, skillsVisible] = useScrollReveal({ threshold: 0.1 });
+  const [educationRef, educationVisible] = useScrollReveal({ threshold: 0.2 });
+  const [certificatesRef, certificatesVisible] = useScrollReveal({
+    threshold: 0.1,
+  });
+  const [journeyRef, journeyVisible] = useScrollReveal({ threshold: 0.1 });
+  const [hobbiesRef, hobbiesVisible] = useScrollReveal({ threshold: 0.1 });
+  const [goalsRef, goalsVisible] = useScrollReveal({ threshold: 0.1 });
+
   return (
     <section className="max-container">
-      <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-8 sm:mb-12">
+      <div
+        ref={headerRef}
+        className={`flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-8 sm:mb-12 transition-all duration-1000 ${
+          headerVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
           <img
@@ -47,16 +65,29 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-6 sm:py-10 flex flex-col">
+      <div
+        ref={skillsRef}
+        className={`py-6 sm:py-10 flex flex-col transition-all duration-1000 ${
+          skillsVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-2 sm:gap-3">
           <span className="text-3xl sm:text-4xl">⚡</span>
           Kỹ Năng
-        </h3>
-
+        </h3>{" "}
         <div className="mt-8 sm:mt-16 flex flex-wrap justify-center gap-6 sm:gap-8">
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <div
-              className="group relative w-20 h-20 sm:w-28 sm:h-28"
+              className={`group relative w-20 h-20 sm:w-28 sm:h-28 transition-all duration-1000 ${
+                skillsVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 2 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : "opacity-0 translate-x-20"
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
               key={skill.name}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
@@ -77,7 +108,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-8 sm:py-16">
+      <div
+        ref={educationRef}
+        className={`py-8 sm:py-16 transition-all duration-1000 ${
+          educationVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎓</span>
           Học Vấn
@@ -86,36 +124,51 @@ const About = () => {
           <div className="flex items-start gap-6">
             <div className="flex-shrink-0">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg hover:scale-110 transition-transform duration-300">
-                🎓
+                🏛️
               </div>
             </div>
             <div className="flex-grow">
               <h4 className="text-2xl font-bold text-black mb-3 flex items-center gap-2">
                 {education.school}
-                <span className="text-2xl">🏛️</span>
               </h4>
               <p className="text-gray-700 font-semibold mb-2 text-lg">
-                📖 {education.degree}
+                {education.degree}
               </p>
               <p className="text-gray-600 mb-3">{education.description}</p>
               <span className="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md">
-                📅 {education.period}
+                {education.period}
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-10">
+      <div
+        ref={certificatesRef}
+        className={`py-10 transition-all duration-1000 ${
+          certificatesVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🏆</span>
           Chứng Chỉ
         </h3>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((cert) => (
+          {certificates.map((cert, index) => (
             <div
               key={cert.id}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:-translate-y-2 border-2 border-gray-100 hover:border-blue-400"
+              className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-1000 group cursor-pointer hover:-translate-y-2 border-2 border-gray-100 hover:border-blue-400 ${
+                certificatesVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 3 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : index % 3 === 2
+                  ? "opacity-0 translate-x-20"
+                  : "opacity-0"
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="relative overflow-hidden h-80 bg-gradient-to-br from-blue-50 to-purple-50">
                 <img
@@ -128,21 +181,15 @@ const About = () => {
                     {cert.description}
                   </p>
                 </div>
-                <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg group-hover:rotate-12 transition-transform duration-300">
-                  🏆
-                </div>
               </div>
               <div className="p-6 bg-gradient-to-br from-white to-blue-50">
                 <h4 className="text-lg font-bold text-black mb-3 flex items-center gap-2">
-                  <span className="text-xl">📜</span>
                   {cert.title}
                 </h4>
                 <p className="text-blue-600 text-sm font-semibold mb-2 flex items-center gap-2">
-                  <span>🏢</span>
                   {cert.issuer}
                 </p>
                 <p className="text-gray-500 text-sm flex items-center gap-2">
-                  <span>📅</span>
                   {cert.date}
                 </p>
               </div>
@@ -151,7 +198,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-16">
+      <div
+        ref={journeyRef}
+        className={`py-16 transition-all duration-1000 ${
+          journeyVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🚀</span>
           Hành Trình Học Tập
@@ -164,7 +218,14 @@ const About = () => {
           {journey.map((item, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border-t-4 border-blue-500 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className={`group bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border-t-4 border-blue-500 hover:shadow-2xl transition-all duration-1000 hover:-translate-y-1 ${
+                journeyVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 2 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : "opacity-0 translate-x-20"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="flex items-start gap-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-5xl shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
@@ -173,11 +234,10 @@ const About = () => {
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md">
-                      📅 {item.year}
+                      {item.year}
                     </span>
                   </div>
                   <h4 className="text-xl font-bold text-black mb-3 flex items-center gap-2">
-                    <span className="text-2xl">✨</span>
                     {item.title}
                   </h4>
                   <p className="text-gray-600 leading-relaxed">
@@ -190,7 +250,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-10">
+      <div
+        ref={hobbiesRef}
+        className={`py-10 transition-all duration-1000 ${
+          hobbiesVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎮</span>
           Sở Thích & Đam Mê
@@ -199,7 +266,14 @@ const About = () => {
           {hobbies.map((hobby, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500 hover:-translate-y-1"
+              className={`group bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-1000 border-l-4 border-blue-500 hover:-translate-y-1 ${
+                hobbiesVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 2 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : "opacity-0 translate-x-20"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="flex items-start gap-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-5xl shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
@@ -207,7 +281,6 @@ const About = () => {
                 </div>
                 <div className="flex-1">
                   <h4 className="text-2xl font-bold text-black mb-4 flex items-center gap-2">
-                    <span className="text-2xl">✨</span>
                     {hobby.title}
                   </h4>
                   <p className="text-gray-700 leading-relaxed mb-5">
@@ -230,26 +303,39 @@ const About = () => {
         </div>
       </div>
 
-      <div className="py-16">
+      <div
+        ref={goalsRef}
+        className={`py-16 transition-all duration-1000 ${
+          goalsVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
         <h3 className="subhead-text flex items-center gap-3">
           <span className="text-4xl">🎯</span>
           Mục Tiêu & Định Hướng
         </h3>
         <p className="mt-4 text-slate-500 text-lg">
-          Kế hoạch phát triển bản thân và sự nghiệp trong lĩnh vực công nghệ 🚀
+          Kế hoạch phát triển bản thân và sự nghiệp trong lĩnh vực công nghệ
         </p>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {goals.map((goal, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-400 hover:-translate-y-1"
+              className={`group bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-1000 border-2 border-blue-200 hover:border-blue-400 hover:-translate-y-1 ${
+                goalsVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 2 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : "opacity-0 translate-x-20"
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-5xl shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                   {goal.icon}
                 </div>
                 <h4 className="text-2xl font-bold text-black flex items-center gap-2">
-                  <span className="text-2xl">🎯</span>
                   {goal.title}
                 </h4>
               </div>
