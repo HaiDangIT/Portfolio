@@ -5,6 +5,7 @@ import Island from "../Models/Island";
 import Sky from "../Models/sky";
 import Bird from "../Models/Bird";
 import Plane from "../Models/Plane";
+import Text3D from "../Models/Text3D";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -83,6 +84,7 @@ const Home = () => {
 
           <Bird isRotating={isRotating} />
           <Sky isRotating={isRotating} />
+          <Text3D isRotating={isRotating} />
           <Island
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
